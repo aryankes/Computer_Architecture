@@ -1,0 +1,159 @@
+TITLE: Claims
+
+AUTHOR: 
+Name - ARYAN KESHARWANI
+Roll No - 2201CS19
+Email-ID  - 2201cs19_aryan@iitp.ac.in
+
+Declaration of Authorship
+This txt file, claims.txt, is part of the miniproject of CS209/CS210 at the 
+department of Computer Science and Engg, IIT Patna .
+
+****************************************************/
+
+All the files I submitted, asm.cpp and emu.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+The evidence for Assembler has been uploaded . As for the evidence for the emulator is uploaded
+
+Both of my c++ programs did not show any errors and warnings
+I have Compiled my code with g++ compiler
+
+I Compiled Code with:
+
+1. Assembler: (Requirement is <filename>.asm should be present in same folder which contain assembly code) 
+	(i) g++ asm.cpp -o asm
+	(ii) ./asm
+
+2. Emulator: (Requirement is object file named as machineCode.o which is produced by asm.cpp)
+	(i) g++ emu.cpp -o emu
+	(ii) ./emu
+	
+	
+============================= 
+Program format and structure:
+=============================
+1. The assembler:
+
+ 	* with two data structures to store respectively labels and mnemonic table with expected operands.
+    * uses a single routine for both passes.
+    * detects label erros.
+    * consistent and sensible formatting with sensible program structure. 
+    * sensible variable, function & type names with explanatory comments.
+		* advanced listing file.
+		* assembles test programs.
+	  * can implements partially the instruction SET.
+
+
+2. The emulator :
+
+	* with two data structures to store respectively memory, mnemonic table with expected operands.
+    * loads object file, 
+    * by giving the instructions like "-befor/-after" , the program can produce memory dump before/after execution.
+    * by giving the instruction like "-trace", the program prints the result of program executed.
+    * detects errant programs.
+
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+I have tested four examples given by the course instructor and two seperate test cases made by me . T
+The analysis of the output and procedure is given as follows
+
+The others were tested without any errors detected and produced three output files, listing file, 
+error log file(if any error or warning present) and machine readable object file, for each example. 
+
+1) BubbleSort
+
+#Input : BubbleSort.asm
+#Output : 
+   -> Assembly : successful with no errors
+   -> Emulation : The bubble sort worked partially , with sorted a subset of the input numbers given
+#Attachement: 
+	- listfile.l
+	- Logfile.log
+	- machineCode.o
+
+
+2) myTests 
+
+#Input : algo1.asm
+#Output : 
+	-> Assembly : successfull with zero Errors
+	-> Emulation : successfull with 9 commands executed in total 
+		- The values of each register and data address can be seen changing !
+#Input : algo2.asm
+#Output : 
+	-> Assembly : successfull with zero Errors
+	-> Emulation : successfull with 5 commands executed in total 
+		- The values of each register and data address can be seen changing !
+		-succesfully executes 1002 instructions
+
+
+3) Test1 (course Instructor)
+
+#Input : test1.asm
+#Output: 
+	-> Assembly : Gave a Warning 
+			- Warning Message in Logfile: 
+										Warning at Line -1 : HALT Instruction Not Found! 
+										Warning at Line 0 : Label with Name "label" not used but Declared! 
+	-> Emulation : The infinite Loop was detected and the program ended with an error of a "Infinite Loop Detected"
+#Attachment : 
+	- test1.l
+	-test1.o
+	-test1.log
+	-test1.trace
+
+4) Test2 (course Instructor)
+
+#Input : test2.asm
+
+#Output : 
+	-> Assembly : 10 errors observed
+					Error at Line 4 : Duplicate Label Found - "label"
+					Error at Line 5 : No  Label as "nonesuch" has been Declared! 
+					Error at Line 6 : Valid Number or label Name not Found! 
+					Error at Line 7 : Operand Missing! 
+					Error at Line 8 : Unexpected Operand Found ! 
+					Error at Line 9 : There is a Extra Operand! 
+					Error at Line 9 : Valid Number or label Name not Found! 
+					Error at Line 10 : Incorrect Label Name!
+					Error at Line 11 : Invalid Mnemonic! 
+					Error at Line 12 : Invalid Mnemonic! 
+	-> Emulator : ObjectCode couldn't be generated , so can't be emulated 
+
+#Attachment : 
+	- test2.log
+
+5) Test3 (Couse Instructor) 
+
+#Input : test3.asm
+#Output : 
+	-> Assembly : Was assembled successfully with Zero Errors and One Warning
+		- Warning Message : " Warning at line -1: HALT Instruction Not Found! "
+	-> Emulation : Abruptly ended , the SET Implementation wasn't successful ! 
+# Attachment : 
+	- test3.l
+	- test3.o 
+	- test3.log
+	-test3.trace
+
+6) Test4 (Course Instructor)
+
+#Input : test4.asm
+#Output : 
+	-> Assembly : Was  successful with zero Errors
+	-> Emulation : Was not successful, program got stuck in an infinite loop
+#Attachments: 
+	- test4.l
+	- test4.o 
+	- test4.trace
+
+2. The Emulator:
+
+
+I have tested the above examples with the made emulator 
+
+
